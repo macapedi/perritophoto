@@ -21,6 +21,23 @@ function populateBreedsList() {
 }
 
 
-
-populateBreedsList();
+function getNewDogPhoto() {
+    const breed = selectBreed.value;
+    if (!breed) {
+      alert("Please select a breed.");
+      return;
+    }
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        const data = JSON.parse(this.responseText);
+        imgDogPhoto.src = data.message;
+      }
+    };
+    xhr.open("GET", `https://dog.ceo/api/breed/${breed}/images/random`);
+    xhr.send();
+  }
+  
+  populateBreedsList();
+  btnNewDog.addEventListener("click", getNewDogPhoto);
 
