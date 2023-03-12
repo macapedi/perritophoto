@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Perrito Photo</title>
+    <div class="title-wrapper">
+      <title>Perrito Photo</title>
+    </div>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1 class="title">Perrito Photo!</h1>
+    <p class="description">
+      This is my perrito Dobby. He is a rescued half Corgi and half Havanese.
+      <br />
+      Pick a breed and get new puppy photos to brighten your day!
+    </p>
     <div class="container">
-      <h1>Perrito Photo!</h1>
       <div class="dog-photo">
         <img src="dobby.jpeg" alt="Dog Photo From An Specific Breed" />
       </div>
-      <div class="breed-select">
-        <label for="breed">Select a breed:</label>
-        <select id="breed" name="breed">
-          <option value="">-- Please select a breed --</option>
-        </select>
+      <div class="form-wrapper">
+        <div class="breed-select">
+          <label for="breed">Select a breed:</label>
+          <select id="breed" name="breed">
+            <option value="">-- Please select a breed --</option>
+          </select>
+        </div>
+        <button id="btn-new-dog">New Pup!</button>
       </div>
-      <button id="btn-new-dog">New Dog</button>
     </div>
     <script src="script.js"></script>
   </body>
