@@ -5,6 +5,15 @@
     margin-top: 50px;
   }
   
+  .title{
+    text-align: center;
+    color: white;
+    background-color: #4caf50;
+  }
+
+  .description{
+    text-align: center;
+  }
   .dog-photo {
     margin-top: 20px;
   }
@@ -15,6 +24,12 @@
   .breed-select {
     margin-top: 20px;
   }
+  .form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
   
   #btn-new-dog {
     margin-top: 20px;
@@ -24,4 +39,26 @@
     color: white;
     border: none;
     cursor: pointer;
+    align-self: center;
+
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      justify-content:center;
+      gap: 1rem;
+    }
+  
+    .dog-photo {
+      margin-top: 0;
+      margin-right: 20px;
+      max-width: 50%;
+    }
+  
+    .breed-select {
+      margin-top: 0;
+      max-width: 50%;
+    }
+  
   }
