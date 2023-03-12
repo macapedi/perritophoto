@@ -9,6 +9,9 @@
     margin-top: 20px;
   }
   
+  img {
+    max-width: 300px;
+  }
   .breed-select {
     margin-top: 20px;
   }
